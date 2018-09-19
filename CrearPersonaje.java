@@ -5,7 +5,6 @@
  */
 package deusexmachina;
 
-
 import fabricas.Cazador.FabricaCazadorE;
 import fabricas.Cazador.FabricaCazadorH;
 import fabricas.Cazador.FabricaCazadorO;
@@ -22,47 +21,66 @@ import fabricas.Mago.FabricaMagoO;
  */
 public class CrearPersonaje {
 
-    public void crear(String h) {
-        switch (h) {
-            case "1":
-                switch (h) {
-                    case "1":
+    public void crear(String raza, String clase) {
+
+        switch (raza) {
+            case "Humano":
+
+                switch (clase) {
+                    case "Mago":
+                        System.out.println("Se ha creado el personaje con raza :" + raza + " y clase: " + clase);
                         Stats(new FabricaGuerreroH());
+
                         break;
-                    case "2":
+                    case "Guerrero":
+                        System.out.println("Se ha creado el personaje con raza :" + raza + " y clase: " + clase);
                         Stats(new FabricaMagoH());
+
                         break;
-                    case "3":
+                    case "Cazador":
+                        System.out.println("Se ha creado el personaje con raza :" + raza + " y clase: " + clase);
                         Stats(new FabricaCazadorH());
+
                         break;
                 }
 
                 break;
-            /*case 2:
+            case "Elfo":
+
                 switch (clase) {
-                    case 1:
+                    case "Mago":
+
                         Stats(new FabricaGuerreroElf());
                         break;
-                    case 2:
+                    case "Guerrero":
+
                         Stats(new FabricaMagoE());
                         break;
-                    case 3:
+                    case "Cazador":
+
                         Stats(new FabricaCazadorE());
                 }
-            case 3:
+            case "Orco":
+
                 switch (clase) {
-                    case 1:
+                    case "Mago":
+                        System.out.println("Se ha creado el personaje con raza :" + raza + " y clase: " + clase);
                         Stats(new FabricaGuerreroO());
+
                         break;
-                    case 2:
+                    case "Guerrero":
+                        System.out.println("Se ha creado el personaje con raza :" + raza + " y clase: " + clase);
                         Stats(new FabricaMagoO());
+
                         break;
-                    case 3:
+                    case "Cazador":
+                        System.out.println("Se ha creado el personaje con raza :" + raza + " y clase: " + clase);
                         Stats(new FabricaCazadorO());
+
                         break;
                 }
                 break;
-           */ default:
+            default:
                 System.out.println("Se ha ingresado una opción inválida.");
         }
         System.out.print("\n");
@@ -79,4 +97,3 @@ public class CrearPersonaje {
         clase.AsignarArmadura();
     }
 }
-
